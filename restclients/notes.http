@@ -1,0 +1,28 @@
+### GET all notes
+GET http://localhost:3000/notes
+
+###Create a note using POST
+POST http://localhost:3000/notes
+Content-Type: application/json
+
+{
+    "title": "Deadlift",
+    "content": "Lifting an immense amount of weight"
+}
+
+###GET a note by id
+GET http://localhost:3000/notes/1
+
+###Update a note using PUT
+PUT http://localhost:3000/notes/1
+Content-Type: application/json
+
+{
+    "title": "god mode",
+    "content": "1 v 11"
+
+}
+
+###Delete a note
+DELETE http://localhost:3000/notes/1
+
