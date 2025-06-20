@@ -21,7 +21,7 @@ CREATE OR REPLACE FUNCTION create_note(p_title VARCHAR, p_content TEXT)
 RETURNS TABLE(id INT, title VARCHAR, content TEXT, created_at TIMESTAMP) AS $$
 BEGIN
   IF EXISTS (
-    SELECT 1 FROM notes WHERE title = p_title AND content = p_content
+    SELECT 1 FROM notes WHERE notes.title = p_title AND notes.content = p_content
   ) THEN
     RAISE EXCEPTION 'Note already exists';
   END IF;
@@ -63,8 +63,7 @@ BEGIN
   UPDATE notes
   SET title = p_title,
       content = p_content
---   WHERE id = notes.id = p_id
-WHERE notes.id = p_id
+  WHERE notes.id = p_id
 
   RETURNING *;
 END;

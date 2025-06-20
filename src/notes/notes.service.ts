@@ -10,7 +10,7 @@ export class NotesService {
     const { title, content } = createNoteDto;
 
     const existing = await pool.query(
-        'SELECT * FRO notes WHERE title = $1 AND content = $2',
+        'SELECT * FROM notes WHERE title = $1 AND content = $2',
         [title, content]
     );
 

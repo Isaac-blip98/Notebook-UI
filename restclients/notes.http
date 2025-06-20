@@ -11,10 +11,10 @@ Content-Type: application/json
 }
 
 ###GET a note by id
-GET http://localhost:3000/notes/1
+GET http://localhost:3000/notes/3
 
 ###Update a note using PUT
-PUT http://localhost:3000/notes/1
+PUT http://localhost:3000/notes/3
 Content-Type: application/json
 
 {
