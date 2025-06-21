@@ -1,0 +1,18 @@
+### Register a User
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "name": "John doe",
+  "email": "johndoe@gmail.com",
+  "password": "doe123"
+}
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "elvisndirangu@yahoo.com",
+  "password": "elvis222"
+}

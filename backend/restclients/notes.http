@@ -1,28 +1,35 @@
-### GET all notes
-GET http://localhost:3000/notes
+@access_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiZWx2aXNuZGlyYW5ndUB5YWhvby5jb20iLCJpYXQiOjE3NTA0ODg4ODUsImV4cCI6MTc1MDU3NTI4NX0.CyZTWkj9tpQCqSRJB5yYMbc-AhBztXgYLr8q4konRsQ
 
-###Create a note using POST
+###Create a Note
 POST http://localhost:3000/notes
+Authorization: Bearer {{access_token}}
 Content-Type: application/json
 
 {
-    "title": "Deadlift",
-    "content": "Lifting an immense amount of weight"
+  "title": "My First Note",
+  "content": "This is the content of my first note."
 }
 
-###GET a note by id
-GET http://localhost:3000/notes/3
+### Get all Notes
+GET http://localhost:3000/notes
+Authorization: Bearer {{access_token}}
 
-###Update a note using PUT
-PUT http://localhost:3000/notes/3
+### Get a single note
+GET http://localhost:3000/notes/5
+Authorization: Bearer {{access_token}}
+
+### Update a Note
+PUT http://localhost:3000/notes/6
+Authorization: Bearer {{access_token}}
 Content-Type: application/json
 
 {
-    "title": "god mode",
-    "content": "1 v 11"
-
+  "title": "Updated Title",
+  "content": "Updated content of the note."
 }
 
-###Delete a note
-DELETE http://localhost:3000/notes/1
+### Delete a Note
+DELETE http://localhost:3000/notes/5
+Authorization: Bearer {{access_token}}
+
 
