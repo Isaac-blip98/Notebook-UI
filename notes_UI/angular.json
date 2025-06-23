@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "notes-UI": {
+    "notes_new": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -22,6 +22,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ]
           },
@@ -53,10 +54,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "notes-UI:build:production"
+              "buildTarget": "notes_new:build:production"
             },
             "development": {
-              "buildTarget": "notes-UI:build:development"
+              "buildTarget": "notes_new:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,11 +76,15 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
